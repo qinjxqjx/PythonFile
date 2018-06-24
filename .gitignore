@@ -1,0 +1,29 @@
+
+#过滤内容
+
+*.zip
+*.rar
+*.via
+*.tmp
+*.err
+#*.gitignore
+*.vcxproj
+*.filters
+*.user
+/Debug   #过滤文件夹
+/MLiA_SourceCode
+pydata-book
+/whl_packages
+/SourceCode
+#跟踪内容
+!*.cpp
+
+
+
+
+###一个文件夹下有很多文件夹和文件，
+###而我只想跟踪其中的一个文件，
+###这样设置就可以满足这种情况，
+###先用共享模式把整个目录 都设置为不跟踪，
+###然后再用保守模式把这个文件夹中想要跟踪的文件设置为被跟踪，
+###配置很简单，就可以跟踪想要跟踪的文件。
