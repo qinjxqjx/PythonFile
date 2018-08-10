@@ -21,6 +21,8 @@ class Parser:
     def parse(self, file):
         self.handler.start('document')
         for block in blocks(file):
+            print "2"
+            print block
             for filter in self.filters:
                 block = filter(block, self.handler)
             for rule in self.rules:
@@ -49,4 +51,9 @@ class BasicTextParser(Parser):
 handler = HTMLRenderer()
 parser = BasicTextParser(handler)
 
-parser.parse(sys.stdin)
+
+with open('test_input.txt','r') as f:
+    parser.parse(f)
+#parser.parse(sys.stdin)
+
+#print sys.stdin.read()
